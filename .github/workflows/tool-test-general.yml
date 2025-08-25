@@ -25,7 +25,7 @@ jobs:
       # The following step is only run LOCALLY - Github runners have everything on them
       - name: Set up our JDK environment
         if: ${{ env.ACT }}
-        uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+        uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
         with:
           java-version: '21'
           distribution: 'temurin'
@@ -44,7 +44,7 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Path Update
         run: |
